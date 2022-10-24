@@ -3,7 +3,8 @@ window.onload = async()=>{
 }
 
 async function writeHTML(){
-    let response = await fetch("https://api.openweathermap.org/data/2.5/weather?lat=-29.717778&lon=-52.425833&lang=pt_br&units=metric&appid=");
+    let token = "";
+    let response = await fetch("https://api.openweathermap.org/data/2.5/weather?lat=-29.717778&lon=-52.425833&lang=pt_br&units=metric&appid="+token);
     
     let data = await response.json();
     
@@ -17,5 +18,5 @@ async function writeHTML(){
     document.getElementById('visibility').innerHTML = 'Visibilidade: ' + visibilidade + ' km';
 
     let icon = "http://openweathermap.org/img/wn/" + data['weather'][0]['icon'] + "@2x.png";
-    document.getElementById('icone').src = url(icon);
+    document.getElementById('weatherIcon').src = icon;
 }
