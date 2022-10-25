@@ -1,8 +1,9 @@
 # SCS Weather
 
 Pagina que apresenta a atual previsão do tempo para
-Santa Cruz do Sul - RS / Brasil
+sua localização.
 
 Dados providos pela API [OpenWeatherMap]("https://openweathermap.org/current").
 
-Projeto ainda em desenvolvimento, para ver o atual progresso mude para a branch: Development.
+Para utilizar este codigo, mude a variavel token (api.js), para o seu token pessoal do OpenWeather.
+Lembre-se de permitir o acesso a localização no browser.
