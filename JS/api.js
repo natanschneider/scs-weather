@@ -1,11 +1,17 @@
 window.onload = async()=>{
-    writeHTML();
+    if(navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(async (position) => {
+            writeHTML(position.coords.latitude, position.coords.longitude);
+        });
+    }else{
+        console.log('Erro ao obter sua localização!');
+    }
 }
 
-async function writeHTML(){
+async function writeHTML(lat, lon){
     let token = "";
 
-    let response = await fetch("https://api.openweathermap.org/data/2.5/weather?lat=-29.717778&lon=-52.425833&lang=pt_br&units=metric&appid="+token);
+    let response = await fetch("https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&lang=pt_br&units=metric&appid=" + token);
     
     let data = await response.json();
     
