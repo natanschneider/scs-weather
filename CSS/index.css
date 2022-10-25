@@ -1,0 +1,8 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+#container{
+    background-color: rgba(136, 132, 132, 0.856);
+    padding-top: 20rem;
+}
