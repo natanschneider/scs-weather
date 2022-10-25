@@ -2,10 +2,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body{
-    background-color: yellow;
-}
-
 #container{
-    background-color: darkgrey;
+    background-color: rgba(136, 132, 132, 0.856);
+    padding-top: 20rem;
 }
